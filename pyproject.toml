@@ -7,12 +7,12 @@ readme = "README.md"
 packages = [{ include = "src" }]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-python-dotenv = "^1.0.1"
+python = "^3.14"
+pillow = "^12.0.0"
 
 
 [tool.poetry.scripts]
-generate-car-parts = "image_utilities.generate_squares.generate_squares:main"
+generate-car-parts = "image_utilities.generate_squares.generate_squares_grid:main"
 
 [build-system]
 requires = ["poetry-core"]

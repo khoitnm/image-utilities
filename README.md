@@ -19,5 +19,5 @@ poetry install
 From the project root:
 
 ```bash
-poetry run python src/generate_squares/generate_squares.py
+poetry run python src/generate_squares/generate_squares_grid.py
 ```
