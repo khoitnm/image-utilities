@@ -21,7 +21,7 @@ def generate_grid(config_file="config.ini"):
     square_size = int(config["Grid"].get("square_size", 64))
     columns = int(config["Grid"].get("columns", 5))
     rows = int(config["Grid"].get("rows", 8))
-    square_color = parse_rgba(config["Grid"].get("square_color", "52,152,219,255"))
+    border_color = parse_rgba(config["Grid"].get("border_color", "52,152,219,255"))
     background_color = parse_rgba(config["Grid"].get("background_color", "255,255,255,0"))
     output_file = config["Grid"].get("output_file", "output/grid.png")
 
@@ -44,7 +44,7 @@ def generate_grid(config_file="config.ini"):
             y1 = row * square_size
             x2 = x1 + square_size
             y2 = y1 + square_size
-            draw.rectangle([x1, y1, x2, y2], outline=(0, 0, 0, 255), fill=square_color)
+            draw.rectangle([x1, y1, x2, y2], outline=border_color, fill=(0,0,0,0))
 
     # --- Save image ---
     image.save(output_path, format="PNG")
