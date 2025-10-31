@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "image-utilities"
+version = "0.1.0"
+description = "Utility scripts for working with images"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.scripts]
+generate-car-parts = "image_utilities.generate_squares.generate_squares:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
