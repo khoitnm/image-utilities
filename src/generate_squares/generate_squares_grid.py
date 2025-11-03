@@ -18,11 +18,11 @@ def generate_grid(config_file="config.ini"):
     config = configparser.ConfigParser()
     config.read(config_file)
 
-    square_size = int(config["Grid"].get("square_size", 64))
-    columns = int(config["Grid"].get("columns", 5))
-    rows = int(config["Grid"].get("rows", 8))
-    border_color = parse_rgba(config["Grid"].get("border_color", "52,152,219,255"))
-    background_color = parse_rgba(config["Grid"].get("background_color", "255,255,255,0"))
+    square_size = int(config["Grid"].get("square_size"))
+    columns = int(config["Grid"].get("columns"))
+    rows = int(config["Grid"].get("rows"))
+    border_color = parse_rgba(config["Grid"].get("border_color","0,0,0,255"))
+    background_color = parse_rgba(config["Grid"].get("background_color", "0,0,0,0"))
     output_file = config["Grid"].get("output_file", "output/grid.png")
 
     # --- Prepare output folder ---
